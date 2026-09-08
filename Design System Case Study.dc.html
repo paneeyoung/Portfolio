@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  html,body{ margin:0; padding:0; background:#F5F0E6; color:#2E3F52; font-family:'Work Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+  *{ box-sizing:border-box; }
+  a{ color:#F0BABA; }
+  a:hover{ color:#F0BABA; }
+  @media (max-width:700px){
+    .dsc-grid4, .dsc-grid2, .dsc-grid3{ grid-template-columns:1fr !important; }
+    .dsc-roadmap{ min-width:0 !important; grid-template-columns:1fr !important; }
+  }
+</style>
+</helmet>
+
+<div style="background:#345B7D; color:#F5F0E6;">
+  <header style="max-width:900px; margin:0 auto; padding:26px 28px; display:flex; align-items:center; justify-content:space-between;">
+    <a href="Panee Portfolio.dc.html" style="font-family:'Archivo Black',sans-serif; font-size:14px; color:#F5F0E6;" style-hover="color:#F0BABA;">← Panee Youngprasit</a>
+    <a href="mailto:paneeyoung@gmail.com" style="background:#F0BABA; color:#345B7D; font-size:13.5px; font-weight:600; padding:9px 18px; border-radius:999px;" style-hover="background:#F0BABA;">Contact</a>
+  </header>
+  <div style="max-width:900px; margin:0 auto; padding:24px 28px 64px;">
+    <span style="display:inline-flex; align-items:center; gap:8px; background:rgba(167,184,156,0.3); color:#EAF1E5; font-size:12px; font-weight:600; letter-spacing:0.04em; padding:6px 14px; border-radius:999px; margin-bottom:20px;"><span style="width:6px; height:6px; border-radius:50%; background:#A7B89C; display:inline-block;"></span>IN PROGRESS · NOSTRADAMUS · 2026</span>
+    <h1 style="font-family:'Archivo Black',sans-serif; font-size:clamp(38px,6vw,60px); line-height:1.05; margin:0 0 6px;">Design System</h1>
+    <h1 style="font-family:'Bodoni Moda',serif; font-style:italic; font-weight:500; font-size:clamp(38px,6vw,60px); line-height:1.05; margin:0 0 20px; color:#F0BABA;">Handoff.</h1>
+    <p style="font-size:17px; line-height:1.6; color:#DCE3E9; max-width:60ch; margin:0 0 30px;">From Figma component to working Vue code: how I identified, researched, and solved a structural handoff problem.</p>
+    <div style="display:flex; gap:32px; flex-wrap:wrap; padding-top:20px; border-top:1px solid rgba(245,240,230,0.15);">
+      <div><p style="font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:#B7C8D3; margin:0 0 4px;">Role</p><p style="margin:0; font-size:14px;">UX/UI Designer, design system owner</p></div>
+      <div><p style="font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:#B7C8D3; margin:0 0 4px;">Tools</p><p style="margin:0; font-size:14px;">Figma, Code Connect, Vue, Claude/Gemini</p></div>
+      <div><p style="font-size:11px; text-transform:uppercase; letter-spacing:0.1em; color:#B7C8D3; margin:0 0 4px;">Timeline</p><p style="margin:0; font-size:14px;">Ongoing, 4+ years</p></div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:900px; margin:0 auto; padding:56px 28px 0;">
+  <div class="dsc-grid4" style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:72px;">
+    <div style="background:#FFFFFF; border-radius:6px; padding:22px 18px;"><p style="font-family:'Archivo Black',sans-serif; font-size:28px; color:#345B7D; margin:0 0 4px;">100+</p><p style="margin:0; font-size:13px; color:#7C93A0;">Figma components</p></div>
+    <div style="background:#FFFFFF; border-radius:6px; padding:22px 18px;"><p style="font-family:'Archivo Black',sans-serif; font-size:28px; color:#345B7D; margin:0 0 4px;">100+</p><p style="margin:0; font-size:13px; color:#7C93A0;">Vue components</p></div>
+    <div style="background:#FFFFFF; border-radius:6px; padding:22px 18px;"><p style="font-family:'Archivo Black',sans-serif; font-size:28px; color:#A7B89C; margin:0 0 4px;">−43 hrs</p><p style="margin:0; font-size:13px; color:#7C93A0;">Time saved</p></div>
+    <div style="background:#FFFFFF; border-radius:6px; padding:22px 18px;"><p style="font-family:'Archivo Black',sans-serif; font-size:28px; color:#345B7D; margin:0 0 4px;">90%+</p><p style="margin:0; font-size:13px; color:#7C93A0;">AI accuracy after</p></div>
+  </div>
+
+  <h2 style="font-family:'Archivo Black',sans-serif; font-size:15px; text-transform:uppercase; letter-spacing:0.06em; color:#345B7D; border-bottom:1px solid #CBD6C4; padding-bottom:14px; margin:0 0 24px;">The problem</h2>
+  <div class="dsc-grid2" style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-bottom:72px;">
+    <div style="background:#FFFFFF; border-radius:6px; padding:22px;">
+      <p style="color:#F0BABA; font-size:11px; font-weight:700; letter-spacing:0.05em; margin:0 0 6px;">PROBLEM 01</p>
+      <p style="font-weight:600; font-size:16px; margin:0 0 8px;">AI generates generic code</p>
+      <p style="font-size:13.5px; line-height:1.6; color:#4B4A46; margin:0;">Sees a screenshot, not component structure. Builds HTML &amp; CSS from scratch every time, ignoring the existing library entirely.</p>
+    </div>
+    <div style="background:#FFFFFF; border-radius:6px; padding:22px;">
+      <p style="color:#F0BABA; font-size:11px; font-weight:700; letter-spacing:0.05em; margin:0 0 6px;">PROBLEM 02</p>
+      <p style="font-weight:600; font-size:16px; margin:0 0 8px;">Component names don't match</p>
+      <p style="font-size:13.5px; line-height:1.6; color:#4B4A46; margin:0;">Buttons/Blauw/solid vs &lt;Button variant="primary"&gt;, no formal link between design and code. AI guesses wrong every time.</p>
+    </div>
+    <div style="background:#FFFFFF; border-radius:6px; padding:22px;">
+      <p style="color:#F0BABA; font-size:11px; font-weight:700; letter-spacing:0.05em; margin:0 0 6px;">PROBLEM 03</p>
+      <p style="font-weight:600; font-size:16px; margin:0 0 10px;">Color drift across layers</p>
+      <p style="font-size:13.5px; line-height:1.6; color:#4B4A46; margin:0 0 14px;">Figma #00A0D1 · Element Plus #138FD7 · Production: manual override. Three different blues across one product.</p>
+      <div style="display:flex; gap:10px;">
+        <div style="width:70px; height:70px; border-radius:4px; background:#00A0D1;"></div>
+        <div style="width:70px; height:70px; border-radius:4px; background:#138FD7;"></div>
+      </div>
+    </div>
+    <div style="background:#FFFFFF; border-radius:6px; padding:22px;">
+      <p style="color:#F0BABA; font-size:11px; font-weight:700; letter-spacing:0.05em; margin:0 0 6px;">PROBLEM 04</p>
+      <p style="font-weight:600; font-size:16px; margin:0 0 8px;">v2 library incomplete</p>
+      <p style="font-size:13.5px; line-height:1.6; color:#4B4A46; margin:0;">AI migration from v1 silently missed components. Library not production-ready, a full rebuild as v3 was the only viable path.</p>
+    </div>
+  </div>
+
+  <h2 style="font-family:'Archivo Black',sans-serif; font-size:15px; text-transform:uppercase; letter-spacing:0.06em; color:#345B7D; border-bottom:1px solid #CBD6C4; padding-bottom:14px; margin:0 0 28px;">The process</h2>
+  <div style="display:flex; flex-direction:column; gap:26px; margin-bottom:72px;">
+    <div>
+      <p style="font-size:11px; font-weight:700; letter-spacing:0.05em; color:#345B7D; margin:0 0 4px;">DESIGN · ME</p>
+      <p style="font-weight:600; font-size:15.5px; margin:0 0 4px;">Audit v1 vs v2 → decide to rebuild as v3</p>
+      <p style="font-size:13.5px; line-height:1.6; color:#4B4A46; margin:0;">AI migration missed too many components. Fixing v2 would have taken longer. Decision: skip v2, build v3 from scratch with proper structure.</p>
+    </div>
+    <div>
+      <p style="font-size:11px; font-weight:700; letter-spacing:0.05em; color:#345B7D; margin:0 0 4px;">DESIGN · ME</p>
+      <p style="font-weight:600; font-size:15.5px; margin:0 0 4px;">Build v3: Variables, Text Styles, Components</p>
+      <p style="font-size:13.5px; line-height:1.6; color:#4B4A46; margin:0;">65 Figma Variables · 13 Text Styles · Buttons from 20+ separate frames into 1 component with variants + properties.</p>
+    </div>
+    <div>
+      <p style="font-size:11px; font-weight:700; letter-spacing:0.05em; color:#7C93A0; margin:0 0 4px;">DEV</p>
+      <p style="font-weight:600; font-size:15.5px; margin:0 0 4px;">Vue DevTools</p>
+      <p style="font-size:13.5px; line-height:1.6; color:#4B4A46; margin:0;">One dev needed to share dev-library access and verify component names, design has no direct visibility into the codebase.</p>
+    </div>
+    <div>
+      <p style="font-size:11px; font-weight:700; letter-spacing:0.05em; color:#F0BABA; margin:0 0 4px;">TOGETHER</p>
+      <p style="font-weight:600; font-size:15.5px; margin:0 0 4px;">Build component mapping table</p>
+      <p style="font-size:13.5px; line-height:1.6; color:#4B4A46; margin:0;">I provide Figma names + variants. Dev translates to Vue props. One shared reference eliminates back-and-forth entirely.</p>
+    </div>
+    <div>
+      <p style="font-size:11px; font-weight:700; letter-spacing:0.05em; color:#7C93A0; margin:0 0 4px;">DEV</p>
+      <p style="font-weight:600; font-size:15.5px; margin:0 0 4px;">Publish Code Connect via GitLab CI/CD</p>
+      <p style="font-size:13.5px; line-height:1.6; color:#4B4A46; margin:0;">Formal bridge between Figma and Vue. Works with GitLab, no GitHub dependency. Dev Mode shows the correct code snippet automatically.</p>
+    </div>
+    <div>
+      <p style="font-size:11px; font-weight:700; letter-spacing:0.05em; color:#A7B89C; margin:0 0 4px;">RESULT</p>
+      <p style="font-weight:600; font-size:15.5px; margin:0 0 4px;">AI uses the right components automatically</p>
+      <p style="font-size:13.5px; line-height:1.6; color:#4B4A46; margin:0;">Claude Code reads Figma via MCP · Dev Mode shows correct Vue snippets · Rework reduced from 1–2 hrs to ~15 min per component.</p>
+    </div>
+  </div>
+
+  <h2 style="font-family:'Archivo Black',sans-serif; font-size:15px; text-transform:uppercase; letter-spacing:0.06em; color:#345B7D; border-bottom:1px solid #CBD6C4; padding-bottom:14px; margin:0 0 24px;">Two alignment approaches</h2>
+  <div style="margin-bottom:40px;">
+    <p style="font-weight:600; font-size:16px; margin:0 0 10px;">Option A: Full library alignment — is 100% smooth possible?</p>
+    <p style="font-size:14.5px; line-height:1.7; color:#4B4A46; margin:0 0 12px;">Aligning component names between Figma and the Vue codebase theoretically produces the highest AI accuracy (~95%), but 100% is never achievable even with perfect naming.</p>
+    <p style="font-size:14.5px; line-height:1.7; color:#4B4A46; margin:0 0 12px;">Figma names describe visual appearance: Buttons/Blauw/solid, where "Blauw" is color and "solid" is the icon style. Vue names describe functional behavior: &lt;Button variant="primary" icon="plus"&gt;, where "primary" is a semantic role and the icon style is irrelevant to the component itself. Figma-specific concepts have no direct equivalent in the codebase — they exist only at the design layer.</p>
+    <p style="font-size:14.5px; line-height:1.7; color:#4B4A46; margin:0 0 12px;">The dev library also contains complex Element Plus components — el-date-picker, el-select, el-tree — used as black boxes in design. These need Code Connect mappings regardless of naming alignment.</p>
+    <p style="font-size:14.5px; line-height:1.7; color:#2E3F52; margin:0;"><strong>Conclusion:</strong> full alignment reduces AI guesswork significantly and is worth pursuing for the most-used components — but it doesn't eliminate Code Connect, it makes Code Connect more accurate. The realistic ceiling for AI-generated code accuracy, even with perfect alignment, is ~95%. The remaining 5% always needs human judgment.</p>
+  </div>
+  <p style="font-weight:600; font-size:16px; margin:0 0 30px;">Option B: Skip rename, use Code Connect as bridge → 80–90% AI accuracy</p>
+
+  <div style="background:#FFFFFF; border-radius:6px; padding:24px; margin-bottom:72px; overflow-x:auto;">
+    <p style="font-weight:600; font-size:14px; margin:0 0 18px;">Design-to-Code Alignment Roadmap</p>
+    <p style="font-size:11.5px; color:#7C93A0; margin:0 0 18px;">Evaluating restructuring efforts against restraint, tooling, and final sync metrics.</p>
+    <div class="dsc-roadmap" style="display:grid; grid-template-columns:repeat(6,1fr); gap:10px; min-width:820px;">
+      <div style="border:1px solid #E3DCCB; border-radius:4px; padding:12px;"><p style="font-size:9.5px; font-weight:700; color:#7C93A0; letter-spacing:0.04em; margin:0 0 6px;">STEP 01</p><p style="font-size:12.5px; font-weight:600; margin:0 0 6px;">The Problem</p><p style="font-size:11px; color:#4B4A46; line-height:1.5; margin:0;">Design system elements and codebases are structurally out of sync, blocking automation and developers.</p></div>
+      <div style="border:1px solid #E3DCCB; border-radius:4px; padding:12px;"><p style="font-size:9.5px; font-weight:700; color:#7C93A0; letter-spacing:0.04em; margin:0 0 6px;">STEP 02</p><p style="font-size:12.5px; font-weight:600; margin:0 0 6px;">The Process</p><p style="font-size:11px; color:#4B4A46; line-height:1.5; margin:0;">Audit component names, map properties, and establish clean token translation layers.</p></div>
+      <div style="border:2px solid #345B7D; border-radius:4px; padding:12px; background:rgba(52,91,125,0.05);"><p style="font-size:9.5px; font-weight:700; color:#345B7D; letter-spacing:0.04em; margin:0 0 6px;">STEP 03 · STRATEGY DECISION</p><p style="font-size:12.5px; font-weight:600; margin:0 0 6px;">Alignment Strategy</p><p style="font-size:11px; color:#4B4A46; line-height:1.5; margin:0;">Option A: Full Rename — ~95% sync. Option B: Code Connect — skip file remapping via config layer, ~80–90% sync.</p></div>
+      <div style="border:1px solid #E3DCCB; border-radius:4px; padding:12px;"><p style="font-size:9.5px; font-weight:700; color:#7C93A0; letter-spacing:0.04em; margin:0 0 6px;">STEP 04 · VELOCITY IMPACT</p><p style="font-size:12.5px; font-weight:600; margin:0 0 6px;">Time Investment</p><p style="font-size:11px; color:#4B4A46; line-height:1.5; margin:0;">Highly dependent on option path. Heavy upfront cost vs rapid translation layer: weeks vs days.</p></div>
+      <div style="border:1px solid #E3DCCB; border-radius:4px; padding:12px;"><p style="font-size:9.5px; font-weight:700; color:#7C93A0; letter-spacing:0.04em; margin:0 0 6px;">STEP 05 · METHOD</p><p style="font-size:12.5px; font-weight:600; margin:0 0 6px;">Tooling</p><p style="font-size:11px; color:#4B4A46; line-height:1.5; margin:0;">Utilize Figma Code Connect, custom translation scripts, and linters for automated sync checks.</p></div>
+      <div style="border:1px solid #E3DCCB; border-radius:4px; padding:12px;"><p style="font-size:9.5px; font-weight:700; color:#7C93A0; letter-spacing:0.04em; margin:0 0 6px;">STEP 06 · LONG-TERM VALUE</p><p style="font-size:12.5px; font-weight:600; margin:0 0 6px;">Key Takeaway</p><p style="font-size:11px; color:#4B4A46; line-height:1.5; margin:0;">Continuous sync prevents future naming drift, lowering developer overhead permanently. High ROI platform.</p></div>
+    </div>
+  </div>
+
+  <h2 style="font-family:'Archivo Black',sans-serif; font-size:15px; text-transform:uppercase; letter-spacing:0.06em; color:#345B7D; border-bottom:1px solid #CBD6C4; padding-bottom:14px; margin:0 0 24px;">Time investment</h2>
+  <div class="dsc-grid2" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:72px;">
+    <div style="background:#FFFFFF; border-radius:6px; padding:24px; border:1px solid #E3DCCB;">
+      <span style="display:inline-block; background:rgba(240,186,186,0.25); color:#B5555A; font-size:11px; font-weight:700; letter-spacing:0.04em; padding:4px 10px; border-radius:999px; margin-bottom:14px;">SKIPPED</span>
+      <p style="font-family:'Archivo Black',sans-serif; font-size:30px; color:#B5555A; margin:0 0 4px;">37–66 hrs</p>
+      <p style="font-size:13px; color:#7C93A0; margin:0 0 16px;">Full rename + Code Connect</p>
+      <ul style="margin:0; padding:0 0 0 18px; font-size:13px; color:#4B4A46; line-height:1.9;">
+        <li>Audit + rebuild v2 → 8–14 hrs</li>
+        <li>Restructure variants → 8–15 hrs</li>
+        <li>Rename Figma 100+ → 4–6 hrs</li>
+        <li>Dev rename Vue → 4–8 hrs</li>
+        <li>Code Connect setup → 8–15 hrs</li>
+      </ul>
+    </div>
+    <div style="background:#FFFFFF; border-radius:6px; padding:24px; border:1px solid #A7B89C;">
+      <span style="display:inline-block; background:rgba(167,184,156,0.25); color:#4C6B3E; font-size:11px; font-weight:700; letter-spacing:0.04em; padding:4px 10px; border-radius:999px; margin-bottom:14px;">CHOSEN APPROACH ★</span>
+      <p style="font-family:'Archivo Black',sans-serif; font-size:30px; color:#4C6B3E; margin:0 0 4px;">13–23 hrs</p>
+      <p style="font-size:13px; color:#7C93A0; margin:0 0 16px;">Skip rename · Code Connect as bridge</p>
+      <ul style="margin:0; padding:0 0 0 18px; font-size:13px; color:#4B4A46; line-height:1.9;">
+        <li>Staging mapping → 3–5 hrs</li>
+        <li>Code Connect setup → 8–15 hrs</li>
+        <li>Test + QA → 2–3 hrs</li>
+        <li style="color:#9CA6A0;">Rename later, gradually → —</li>
+        <li style="color:#9CA6A0;">No dev rename needed → —</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 style="font-family:'Archivo Black',sans-serif; font-size:15px; text-transform:uppercase; letter-spacing:0.06em; color:#345B7D; border-bottom:1px solid #CBD6C4; padding-bottom:14px; margin:0 0 24px;">Why AI still can't do this alone</h2>
+  <div class="dsc-grid3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:20px;">
+    <div style="background:#FFFFFF; border-radius:6px; padding:22px; text-align:center;"><p style="font-family:'Archivo Black',sans-serif; font-size:26px; color:#B5555A; margin:0 0 6px;">40–60%</p><p style="margin:0; font-size:13px; color:#7C93A0;">Accuracy with screenshot only</p></div>
+    <div style="background:#FFFFFF; border-radius:6px; padding:22px; text-align:center;"><p style="font-family:'Archivo Black',sans-serif; font-size:26px; color:#C99A3E; margin:0 0 6px;">70–80%</p><p style="margin:0; font-size:13px; color:#7C93A0;">Accuracy with design system docs</p></div>
+    <div style="background:#FFFFFF; border-radius:6px; padding:22px; text-align:center;"><p style="font-family:'Archivo Black',sans-serif; font-size:26px; color:#4C6B3E; margin:0 0 6px;">90%+</p><p style="margin:0; font-size:13px; color:#7C93A0;">Accuracy with Figma MCP connected</p></div>
+  </div>
+  <p style="font-size:14px; line-height:1.7; color:#4B4A46; margin:0 0 72px;">When AI receives a Figma screen, it sees a visual snapshot, not component data. Without Code Connect, it cannot map a blue button to &lt;Button variant="primary"&gt;. Code Connect encodes that translation once, making it machine-readable for every AI tool downstream.</p>
+
+  <h2 style="font-family:'Archivo Black',sans-serif; font-size:15px; text-transform:uppercase; letter-spacing:0.06em; color:#345B7D; border-bottom:1px solid #CBD6C4; padding-bottom:14px; margin:0 0 24px;">Tooling</h2>
+  <div class="dsc-grid3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:56px;">
+    <div style="padding:4px;"><p style="font-weight:600; font-size:15px; margin:0 0 6px;">Code Connect</p><p style="font-size:13px; line-height:1.6; color:#4B4A46; margin:0;">Figma ↔ Vue officially linked. Dev Mode shows the correct code snippet for every component automatically.</p></div>
+    <div style="padding:4px;"><p style="font-weight:600; font-size:15px; margin:0 0 6px;">Figma MCP</p><p style="font-size:13px; line-height:1.6; color:#4B4A46; margin:0;">Claude Code reads Figma directly. AI generates the correct Vue component using real design data.</p></div>
+    <div style="padding:4px;"><p style="font-weight:600; font-size:15px; margin:0 0 6px;">Vue DevTools</p><p style="font-size:13px; line-height:1.6; color:#4B4A46; margin:0;">Requires one dev to provide dev-library access and confirm component names, design has no direct visibility into the codebase.</p></div>
+  </div>
+
+  <p style="font-size:13px; color:#8C8478; border-top:1px dashed #E8E0CF; padding-top:20px; margin-top:0 0 64px;">Screens shown are real production UI from Nostradamus ICT BV.</p>
+</div>
+
+<div style="background:#345B7D; color:#DCE3E9; text-align:center; padding:40px 28px;">
+  <a href="Panee Portfolio.dc.html" style="color:#F0BABA; font-size:14px;">← Back to all work</a>
+</div>
+</x-dc>
+</body>
+</html>

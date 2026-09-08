@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="normal">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  html{ scroll-behavior: smooth; }
+  html,body{ margin:0; padding:0; background:#F5F0E6; color:#2E3F52; font-family:'Work Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+  *{ box-sizing:border-box; }
+  a{ color:#F0BABA; text-decoration:none; }
+  a:hover{ color:#F0BABA; }
+</style>
+</helmet>
+
+<div style="background: #6D8CA6; color: #F5F0E6;">
+  <header style="max-width: 1120px; margin: 0 auto; padding: 26px 28px; display: flex; align-items: center; justify-content: space-between;">
+    <a href="Panee Portfolio.dc.html" style="font-family: 'Archivo Black', sans-serif; font-size: 15px; letter-spacing: 0.02em; color: #F5F0E6; text-decoration: none;">← PANEE YOUNGPRASIT</a>
+    <nav style="display: flex; align-items: center; gap: 26px; font-size: 14px;">
+      <a href="Panee Portfolio.dc.html" style="color: #F5F0E6;">Work</a>
+      <a href="mailto:paneeyoung@gmail.com" style="background: #F0BABA; color: #345B7D; font-size: 13.5px; font-weight: 600; padding: 9px 18px; border-radius: 999px;">Contact</a>
+    </nav>
+  </header>
+
+  <section style="max-width: 1120px; margin: 0 auto; padding: 60px 28px;">
+    <h1 style="font-family: 'Bodoni Moda', serif; font-weight: 700; font-size: clamp(48px, 8vw, 72px); line-height: 1.1; margin: 0 0 24px; color: #F0BABA;">{{ projectTitle }}</h1>
+    <p style="font-size: 16px; line-height: 1.6; color: #FFFFFF; max-width: 60ch; margin: 0;">{{ projectSubtitle }}</p>
+  </section>
+</div>
+
+<section style="max-width: 1120px; margin: 0 auto; padding: 60px 28px;">
+  <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;">
+    <div>
+      <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 18px; text-transform: uppercase; color: #345B7D; font-weight: 100; letter-spacing: 0.02em; margin: 0 0 16px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #F0BABA;">Overview</h2>
+      <p style="font-size: 15px; line-height: 1.7; color: #4B5D6B; margin: 0 0 24px;">{{ projectOverview }}</p>
+      <sc-if value="{{ projectSkills }}" hint-placeholder-val="{{ true }}">
+        <h3 style="font-family: 'Archivo Black', sans-serif; font-size: 13px; text-transform: uppercase; color: #7C93A0; font-weight: 100; letter-spacing: 0.02em; margin: 0 0 12px;">Skills</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: #4B5D6B; margin: 0;">{{ projectSkills }}</p>
+      </sc-if>
+    </div>
+    <div>
+      <h3 style="font-family: 'Archivo Black', sans-serif; font-size: 13px; text-transform: uppercase; color: #7C93A0; font-weight: 100; letter-spacing: 0.02em; margin: 0 0 16px;">Details</h3>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <sc-if value="{{ projectRole }}" hint-placeholder-val="{{ 'Role' }}">
+          <div>
+            <p style="font-size: 12px; text-transform: uppercase; color: #7C93A0; letter-spacing: 0.02em; margin: 0 0 6px; font-weight: 600;">Role</p>
+            <p style="font-size: 15px; color: #2E3F52; margin: 0;">{{ projectRole }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ projectTeam }}" hint-placeholder-val="{{ 'Team' }}">
+          <div>
+            <p style="font-size: 12px; text-transform: uppercase; color: #7C93A0; letter-spacing: 0.02em; margin: 0 0 6px; font-weight: 600;">Team</p>
+            <p style="font-size: 15px; color: #2E3F52; margin: 0;">{{ projectTeam }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ projectYear }}" hint-placeholder-val="{{ '2024' }}">
+          <div>
+            <p style="font-size: 12px; text-transform: uppercase; color: #7C93A0; letter-spacing: 0.02em; margin: 0 0 6px; font-weight: 600;">Year</p>
+            <p style="font-size: 15px; color: #2E3F52; margin: 0;">{{ projectYear }}</p>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="max-width: 1120px; margin: 0 auto; padding: 0 28px 60px;">
+  <sc-if value="{{ heroImage }}" hint-placeholder-val="{{ true }}">
+    <img src="{{ heroImage }}" alt="{{ projectTitle }} hero" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 60px; cursor:zoom-in;">
+  </sc-if>
+
+  <div style="margin-bottom: 80px;">
+    <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 18px; text-transform: uppercase; color: #345B7D; font-weight: 100; letter-spacing: 0.02em; margin: 0 0 20px; padding-bottom: 12px; border-bottom: 2px solid #F0BABA;">Moodboard</h2>
+    <img src="uploads/20190306_Graphic Office leasing_Grey option-1-35e3b662.png" alt="Moodboard" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+  </div>
+
+  <div style="margin-bottom: 80px;">
+    <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 18px; text-transform: uppercase; color: #345B7D; font-weight: 100; letter-spacing: 0.02em; margin: 0 0 20px; padding-bottom: 12px; border-bottom: 2px solid #F0BABA;">3D Renderings</h2>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 30px;">
+      <img src="uploads/20190306_Graphic Office leasing_Grey option-5-eb82adab.jpg" alt="3D Rendering 1" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="uploads/20190306_Graphic Office leasing_Grey option-6-05aa8f7c.jpg" alt="3D Rendering 2" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+    </div>
+    <img src="uploads/20190306_Graphic Office leasing_Grey option-6_2-7a6d675f.jpg" alt="3D Rendering 3" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+  </div>
+
+  <div style="margin-bottom: 80px;">
+    <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 18px; text-transform: uppercase; color: #345B7D; font-weight: 100; letter-spacing: 0.02em; margin: 0 0 20px; padding-bottom: 12px; border-bottom: 2px solid #F0BABA;">Construction Drawings</h2>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+      <img src="uploads/20190306_Graphic Office leasing_Grey option-10-f9600b97.jpg" alt="Construction Detail 1" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="uploads/20190306_Graphic Office leasing_Grey option-11-a689bf3f.jpg" alt="Construction Detail 2" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="uploads/20190306_Graphic Office leasing_Grey option-14-756df628.jpg" alt="Construction Detail 3" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="uploads/20190306_Graphic Office leasing_Grey option-15-9ccef845.jpg" alt="Construction Detail 4" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+    </div>
+    <img src="uploads/20190306_Graphic Office leasing_Grey option-16-96ef0abb.jpg" alt="Construction Detail 5" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-top: 20px; cursor:zoom-in;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px;">
+      <img src="assets/mall-cd-01.jpg" alt="Leasing office construction drawing 1" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-02.jpg" alt="Leasing office construction drawing 2" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-03.jpg" alt="Leasing office construction drawing 3" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-04.jpg" alt="Leasing office construction drawing 4" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-05.jpg" alt="Leasing office construction drawing 5" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-06.jpg" alt="Leasing office construction drawing 6" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-07.jpg" alt="Leasing office construction drawing 7" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-08.jpg" alt="Leasing office construction drawing 8" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-09.jpg" alt="Leasing office construction drawing 9" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-10.jpg" alt="Leasing office construction drawing 10" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-11.jpg" alt="Leasing office construction drawing 11" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-12.jpg" alt="Leasing office construction drawing 12" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-13.jpg" alt="Leasing office construction drawing 13" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-14.jpg" alt="Leasing office construction drawing 14" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-15.jpg" alt="Leasing office construction drawing 15" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-16.jpg" alt="Leasing office construction drawing 16" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-17.jpg" alt="Leasing office construction drawing 17" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-18.jpg" alt="Leasing office construction drawing 18" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="assets/mall-cd-19.jpg" alt="Leasing office construction drawing 19" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+    </div>
+  </div>
+
+  <div style="margin-bottom: 80px;">
+    <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 18px; text-transform: uppercase; color: #345B7D; font-weight: 100; letter-spacing: 0.02em; margin: 0 0 20px; padding-bottom: 12px; border-bottom: 2px solid #F0BABA;">Completed Space</h2>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+      <img src="uploads/IMG_1199-cc047e96.JPG" alt="Completed Reception Area" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+      <img src="uploads/IMG_3905-f770e40e.JPG" alt="Completed Lounge Area" onClick="{{ openLightbox }}" style="width: 100%; height: auto; border-radius: 8px; display: block; cursor:zoom-in;">
+    </div>
+  </div>
+</section>
+
+<div style="background: rgba(240, 186, 186, 0.16); color: #2E3F52;">
+  <section style="max-width: 1120px; margin: 0 auto; padding: 60px 28px; text-align: center;">
+    <h2 style="font-family: 'Bodoni Moda', serif; font-style: italic; font-weight: 500; font-size: 28px; color: #345B7D; margin: 0 0 20px;">Want to work together?</h2>
+    <a href="mailto:paneeyoung@gmail.com" style="background: #F0BABA; color: #345B7D; font-size: 14px; font-weight: 600; padding: 12px 28px; border-radius: 999px; display: inline-block;">Contact</a>
+  </section>
+</div>
+
+<sc-if value="{{ lightboxSrc }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeLightbox }}" style="position:fixed; inset:0; background:rgba(30,38,48,0.92); display:flex; align-items:center; justify-content:center; z-index:1000; padding:40px; cursor:zoom-out;">
+    <img src="{{ lightboxSrc }}" alt="Enlarged view" style="max-width:100%; max-height:100%; object-fit:contain; border-radius:4px; box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+  </div>
+</sc-if>
+
+<footer style="max-width: 1120px; margin: 0 auto; padding: 40px 28px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 13px; color: #7C93A0; border-top: 1px solid rgba(46, 63, 82, 0.1);">
+  <div>Breda, Netherlands</div>
+  <div style="display: flex; gap: 16px;">
+    <a href="mailto:paneeyoung@gmail.com" style="color: #2E3F52;">Email</a>
+    <a href="https://www.linkedin.com/in/panee-youngprasit-721445130/" target="_blank" rel="noopener" style="color: #2E3F52;">LinkedIn</a>
+    <a href="https://www.instagram.com/modeejungz/" target="_blank" rel="noopener" style="color: #2E3F52;">Instagram</a>
+  </div>
+  <div>© 2026 Panee Youngprasit</div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;1920&quot;,&quot;height&quot;:&quot;1080&quot;},&quot;projectTitle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;The Mall Office&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;projectSubtitle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Office Renovation&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;projectOverview&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;As an in-house interior designer, I led the renovation of the leasing office on the 9th floor of M8 The Mall Bangkapi, creating a modern, flexible workspace that balances functionality with contemporary design.&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;projectSkills&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Construction Drawings · BOQ · Material Specification · Consultant Coordination&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;projectRole&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Interior Designer&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;projectTeam&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Designer + PM in-house&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;projectYear&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;2019&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;heroImage&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;unit&quot;:&quot;URL&quot;},&quot;sections&quot;:{&quot;editor&quot;:null,&quot;default&quot;:[],&quot;tsType&quot;:&quot;Array&lt;{title:string,description:string,image:string}&gt;&quot;}}">
+class Component extends DCLogic {
+  state = { lightboxSrc: null };
+  renderVals() {
+    return {
+      projectTitle: this.props.projectTitle ?? 'Project Title',
+      projectSubtitle: this.props.projectSubtitle ?? 'A brief description of the project.',
+      projectOverview: this.props.projectOverview ?? 'Add project overview here.',
+      projectRole: this.props.projectRole ?? '',
+      projectTeam: this.props.projectTeam ?? '',
+      projectYear: this.props.projectYear ?? '',
+      heroImage: this.props.heroImage ?? '',
+      sections: this.props.sections ?? [],
+      lightboxSrc: this.state.lightboxSrc,
+      openLightbox: (e) => this.setState({ lightboxSrc: e.currentTarget.src }),
+      closeLightbox: () => this.setState({ lightboxSrc: null }),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

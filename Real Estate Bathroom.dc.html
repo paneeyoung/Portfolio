@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  html,body{ margin:0; padding:0; background:#F5F0E6; color:#2E3F52; font-family:'Work Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+  *{ box-sizing:border-box; }
+  a{ color:#DBA0A0; }
+  a:hover{ color:#DBA0A0; }
+  @media (max-width:700px){
+    .reb-grid4{ grid-template-columns:repeat(2,1fr) !important; }
+  }
+</style>
+</helmet>
+
+<div style="background:#2E3F52; color:#F5F0E6;">
+  <header style="max-width:900px; margin:0 auto; padding:26px 28px; display:flex; align-items:center; justify-content:space-between;">
+    <a href="Panee Portfolio.dc.html" style="font-family:'Archivo Black',sans-serif; font-size:14px; color:#B9CBDA;" style-hover="color:#F5F0E6;">← Panee Youngprasit</a>
+    <a href="mailto:paneeyoung@gmail.com" style="background:#DBA0A0; color:#2E3F52; font-size:13.5px; font-weight:600; padding:9px 18px; border-radius:999px;" style-hover="background:#DBA0A0;">Contact</a>
+  </header>
+  <div style="max-width:900px; margin:0 auto; padding:24px 28px 64px;">
+    <p style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:20px; color:#DBA0A0; margin:0 0 8px;">Interior · Residential</p>
+    <h1 style="font-family:'Archivo Black',sans-serif; font-size:clamp(38px,6vw,64px); line-height:1.05; margin:0 0 20px;">Real Estate Bathroom</h1>
+    <p style="font-size:17px; line-height:1.6; color:#B9CBDA; max-width:60ch; margin:0 0 30px;">A private residence bathroom suite — dark freestanding tub, marble tile, and mirrored storage in a moody monochrome palette.</p>
+  </div>
+</div>
+
+<div style="max-width:900px; margin:0 auto; padding:64px 28px;">
+  <div style="margin-bottom:56px;">
+    <p style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:15px; color:#345B7D; margin:0 0 14px;">My Role</p>
+    <ul style="display:flex; flex-wrap:wrap; gap:10px 12px; margin:0; padding:0; list-style:none;">
+      <li style="background:#EFE6D8; color:#2E3F52; font-size:14px; padding:8px 16px; border-radius:999px;">Design</li>
+      <li style="background:#EFE6D8; color:#2E3F52; font-size:14px; padding:8px 16px; border-radius:999px;">Material Board</li>
+      <li style="background:#EFE6D8; color:#2E3F52; font-size:14px; padding:8px 16px; border-radius:999px;">Presentation</li>
+      <li style="background:#EFE6D8; color:#2E3F52; font-size:14px; padding:8px 16px; border-radius:999px;">3D Rendering</li>
+    </ul>
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr; gap:20px; margin-bottom:56px;">
+    <img src="assets/real-estate-bathroom-1.jpg" data-src="assets/real-estate-bathroom-1.jpg" onClick="{{ openZoom }}" alt="Real estate bathroom suite with freestanding tub" style="width:100%; display:block; border-radius:4px; cursor:zoom-in;">
+  </div>
+
+  <div style="margin-bottom:64px;">
+    <p style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:15px; color:#345B7D; margin:0 0 14px;">Master Bathroom</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; grid-auto-rows:1fr; gap:16px;">
+      <img src="assets/master-bathroom-1.jpg" data-src="assets/master-bathroom-1.jpg" onClick="{{ openZoom }}" alt="Master bathroom isometric drawing" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/master-bathroom-2.jpg" data-src="assets/master-bathroom-2.jpg" onClick="{{ openZoom }}" alt="Master bathroom top view floor plan" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/master-bathroom-3.jpg" data-src="assets/master-bathroom-3.jpg" onClick="{{ openZoom }}" alt="Master bathroom elevation A drawing" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/master-bathroom-4.jpg" data-src="assets/master-bathroom-4.jpg" onClick="{{ openZoom }}" alt="Master bathroom elevation B and C drawing" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+    </div>
+    <div class="reb-grid4" style="display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:1fr; gap:16px; margin-top:16px;">
+      <img src="assets/master-bathroom-5.jpg" data-src="assets/master-bathroom-5.jpg" onClick="{{ openZoom }}" alt="Master bathroom vanity cabinet isometric drawing" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/master-bathroom-6.jpg" data-src="assets/master-bathroom-6.jpg" onClick="{{ openZoom }}" alt="Master bathroom vanity cabinet elevations" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/master-bathroom-7.jpg" data-src="assets/master-bathroom-7.jpg" onClick="{{ openZoom }}" alt="Master bathroom mirror stand isometric drawing" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/master-bathroom-8.jpg" data-src="assets/master-bathroom-8.jpg" onClick="{{ openZoom }}" alt="Master bathroom mirror stand elevations" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/master-bathroom-9.jpg" data-src="assets/master-bathroom-9.jpg" onClick="{{ openZoom }}" alt="Master bathroom mirror panel isometric drawing" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/master-bathroom-10.jpg" data-src="assets/master-bathroom-10.jpg" onClick="{{ openZoom }}" alt="Master bathroom mirror panel elevations" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/master-bathroom-11.jpg" data-src="assets/master-bathroom-11.jpg" onClick="{{ openZoom }}" alt="Master bathroom towel rail isometric drawing" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/master-bathroom-12.jpg" data-src="assets/master-bathroom-12.jpg" onClick="{{ openZoom }}" alt="Master bathroom towel rail elevations" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+    </div>
+    <div style="display:grid; grid-template-columns:1fr; gap:20px; margin-top:16px;">
+      <img src="assets/real-estate-bathroom-2.jpg" data-src="assets/real-estate-bathroom-2.jpg" onClick="{{ openZoom }}" alt="Bathroom vanity and shower rendering" style="width:100%; display:block; border-radius:4px;">
+    </div>
+  </div>
+
+  <div style="margin-bottom:64px;">
+    <p style="font-family:'Bodoni Moda',serif; font-style:italic; font-size:15px; color:#345B7D; margin:0 0 14px;">1Br. Bathroom</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; grid-auto-rows:1fr; gap:16px;">
+      <img src="assets/1br-bathroom-1.jpg" data-src="assets/1br-bathroom-1.jpg" onClick="{{ openZoom }}" alt="1Br bathroom isometric drawing" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/1br-bathroom-2.jpg" data-src="assets/1br-bathroom-2.jpg" onClick="{{ openZoom }}" alt="1Br bathroom top view floor plan" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/1br-bathroom-3.jpg" data-src="assets/1br-bathroom-3.jpg" onClick="{{ openZoom }}" alt="1Br bathroom elevation A and B drawing" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/1br-bathroom-4.jpg" data-src="assets/1br-bathroom-4.jpg" onClick="{{ openZoom }}" alt="1Br bathroom elevation C and D drawing" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; grid-auto-rows:1fr; gap:16px; margin-top:16px;">
+      <img src="assets/1br-bathroom-5.jpg" data-src="assets/1br-bathroom-5.jpg" onClick="{{ openZoom }}" alt="1Br bathroom vanity isometric drawing" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+      <img src="assets/1br-bathroom-6.jpg" data-src="assets/1br-bathroom-6.jpg" onClick="{{ openZoom }}" alt="1Br bathroom vanity elevations and detail" style="width:100%; display:block; border-radius:4px; border:1px solid #E8E0CF; cursor:zoom-in;">
+    </div>
+  </div>
+
+  <p style="font-size:13px; color:#8C8478; border-top:1px dashed #E8E0CF; padding-top:20px;">Personal styling projects.</p>
+</div>
+
+<sc-if value="{{ zoomSrc }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeZoom }}" style="position:fixed; inset:0; background:rgba(46,63,82,0.94); z-index:999; display:flex; align-items:center; justify-content:center; padding:40px; cursor:zoom-out;">
+    <img src="{{ zoomSrc }}" alt="Zoomed drawing" style="max-width:100%; max-height:100%; object-fit:contain; border-radius:4px; box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+  </div>
+</sc-if>
+
+<div style="background:#2E3F52; color:#B9CBDA; text-align:center; padding:40px 28px;">
+  <a href="Panee Portfolio.dc.html" style="color:#DBA0A0; font-size:14px;">← Back to all work</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { zoomSrc: null };
+  renderVals() {
+    return {
+      zoomSrc: this.state.zoomSrc,
+      openZoom: (e) => this.setState({ zoomSrc: e.currentTarget.dataset.src }),
+      closeZoom: () => this.setState({ zoomSrc: null })
+    };
+  }
+}
+</script>
+</body>
+</html>
